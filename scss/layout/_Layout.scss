@@ -1,0 +1,17 @@
+@import "./Sidebar", "./Content";
+
+.s-layout {
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+
+  &__sidebar {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 15em;
+    height: 100%;
+    background: #243e56;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

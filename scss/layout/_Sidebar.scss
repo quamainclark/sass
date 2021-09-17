@@ -1,0 +1,79 @@
+$lightBlue: rgba(17, 138, 250, 0.932);
+
+@mixin horizontalCenter() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.s-sidebar {
+  &__nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+  
+    img {
+      border-radius: 50%;
+      width: 6em;
+      height: 6em;
+    }
+  
+    &__title {
+      display: inline-block;
+      position: relative;
+      margin: 0.4em 0 0.2em 0;
+  
+      span {
+        font-size: 1.2em;
+      }
+  
+      svg {
+        @include horizontalCenter();
+        margin-left: 0.8em;
+        color: $lightBlue;
+        font-size: 0.8em;
+        cursor: pointer;
+      }
+    }
+  
+    &__address {
+      font-size: 0.8em;
+    }
+  }
+
+  &__nav-link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 4em;
+
+    em {
+      @include horizontalCenter();
+      left: 6em;
+    }
+
+    &:hover {
+      background: #4d6276;
+      border-left: 8px $lightBlue solid;
+      color:$lightBlue;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 2em;
+      display: inline-block;
+      width: 4em;
+      height: 4em;
+    }
+  }
+}
