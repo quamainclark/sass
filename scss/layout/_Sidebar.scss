@@ -65,6 +65,9 @@ $lightBlue: rgba(17, 138, 250, 0.932);
       background: #4d6276;
       border-left: 8px $lightBlue solid;
       color:$lightBlue;
+      animation-name: borderAnimation;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
     }
 
     svg {
@@ -75,5 +78,17 @@ $lightBlue: rgba(17, 138, 250, 0.932);
       width: 4em;
       height: 4em;
     }
+  }
+}
+
+@keyframes borderAnimation {
+  from {
+    border-left-width: 0; 
+  }
+  50% {
+    border-left-width: 1em; 
+  }
+  to {
+    border-left-width: 0;
   }
 }

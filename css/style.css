@@ -81,6 +81,9 @@ a {
   background: #4d6276;
   border-left: 8px rgba(17, 138, 250, 0.932) solid;
   color: rgba(17, 138, 250, 0.932);
+  animation-name: borderAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 .s-sidebar__nav-link svg {
   position: absolute;
@@ -91,6 +94,17 @@ a {
   height: 4em;
 }
 
+@keyframes borderAnimation {
+  from {
+    border-left-width: 0;
+  }
+  50% {
+    border-left-width: 1em;
+  }
+  to {
+    border-left-width: 0;
+  }
+}
 .s-layout__content {
   display: flex;
   justify-content: center;
